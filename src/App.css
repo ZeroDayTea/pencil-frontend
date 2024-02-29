@@ -1,0 +1,317 @@
+html,
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  --primary: #71c3e7;
+  --primaryHover: #50b9e8;
+  --bgPrimary: #f6f6f6;
+  --bgSecondary: #fff;
+  --textColor: rgba(0, 0, 0);
+  --textSecondary: rgba(0, 0, 0, 0.75);
+  --textDisabled: rgba(0, 0, 0, 0.5);
+  background-color: var(--bgPrimary);
+  margin: 0;
+  color: var(--textColor);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Buttons Styling */
+
+.primaryButton {
+  min-width: 105px;
+  height: 32px;
+  border-radius: 50px;
+  border-style: none;
+  background-color: var(--primary);
+  transition: all 0.3s ease-in-out;
+  margin: 0 10px;
+  padding: 0 20px;
+}
+
+.primaryButton:hover {
+  cursor: pointer;
+  background-color: var(--primaryHover);
+}
+
+.secondaryButton {
+  font-size: 16px;
+  color: var(--textSecondary);
+  border: none;
+  white-space: nowrap;
+  text-decoration: underline;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  margin: 0 10px;
+}
+
+.secondaryButtonSelected {
+  color: var(--primaryHover);
+}
+
+.secondaryButton:hover {
+  cursor: pointer;
+  color: var(--primaryHover);
+}
+
+.primaryButton:disabled,
+.primaryButton[disabled],
+.secondaryButton:disabled,
+.secondaryButton[disabled] {
+  background-color: #e5e5e5;
+  color: #b6b1b1;
+}
+
+.secondaryButton > svg {
+  margin-left: 3px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.vertical-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-align-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Dropdown stylings */
+.dropdown_menu_transaction {
+  background-color: white;
+  width: 170px;
+  border: 1.5px solid var(--primaryHover);
+  border-top: none;
+  border-radius: 0px 0px 20px 20px;
+  padding: 5px 20px;
+  margin-top: -8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown_menu_transaction > button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 3px;
+}
+
+.dropdown_menu_transaction > button:hover {
+  color: var(--primaryHover);
+}
+
+/* Input Styling */
+
+.inputLabel {
+  font-size: 16px;
+  color: var(--textSecondary);
+}
+
+.primaryInput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 12px;
+  margin: 0.5em 0;
+  font-size: 16px;
+}
+
+.secondaryInput {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 0 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.primaryInput:focus,
+.secondaryInput:focus {
+  outline: var(--primaryHover) auto 1.5px;
+}
+
+.customCheckbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+}
+
+.inputSubtitle {
+  font-size: 14px;
+  color: red;
+  font-weight: 200;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* table styling */
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0rem 3rem 2.5rem 3rem;
+  background-color: var(--bgSecondary);
+  border-radius: 20px;
+  font-size: 16px;
+  color: var(--textSecondary);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+.tableItem {
+  width: 100%;
+  padding: 15px 30px;
+  background-color: var(--bgPrimary);
+  border-radius: 15px;
+  margin: 15px auto;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  overflow-wrap: break-word;
+}
+
+.tableItemHeader {
+  width: 100%;
+  padding: 20px 30px 10px 30px;
+  display: flex;
+  align-items: center;
+  color: var(--textDisabled);
+  position: sticky;
+  top: 0;
+  background-color: var(--bgSecondary);
+}
+
+.tableItemHeader.is-pinned {
+  background-color: var(--bgSecondary);
+}
+
+.noTableData {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* misc */
+.refreshButton {
+  margin-right: 1em;
+  transition: all 0.3s ease-in-out;
+  color: var(--textSecondary);
+}
+
+.refreshButton:hover {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.trashButton {
+  margin-right: 1em;
+  transition: all 0.3s ease-in-out;
+  color: var(--textSecondary);
+}
+
+.trashButton:hover {
+  cursor: pointer;
+}
+
+.tableEditButton {
+  margin-left: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tableEditButton:hover {
+  cursor: pointer;
+  color: var(--primaryHover);
+  transition: all 0.3s ease-in-out;
+}
+
+.errorMessage {
+  color: rgba(240, 71, 71, 1);
+  margin-top: 5px;
+}
+
+.successMessage {
+  color: rgba(47, 181, 101, 1);
+  margin-top: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.selectedBlue {
+  color: var(--primaryHover);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.transparent {
+  color: transparent;
+}
+
+/* editable text */
+.editableText {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.editableText.small {
+  width: 100px;
+}
+
+.editableText.medium {
+  width: 200px;
+}
+
+.editableText.large {
+  width: 300px;
+}
+.editableText:disabled {
+  border: 1px solid transparent;
+  background-color: inherit;
+}
+
+.editableText:focus {
+  outline: var(--primaryHover) auto 1.5px;
+}
+
+.editableText::-webkit-outer-spin-button,
+.editableText::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.editableText {
+  -moz-appearance: textfield;
+}

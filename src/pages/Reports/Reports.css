@@ -1,0 +1,63 @@
+.reportsHeader {
+  display: flex;
+  align-items: baseline;
+}
+
+.reportsQueryArea {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: -10px 0 16px 0;
+}
+
+.reportsQueryArea > .customCombobox {
+  margin-right: 28px;
+}
+
+.reportSummary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  margin: 1.5rem 4rem 0 4rem;
+  font-size: 18px;
+}
+
+.reportSummary p {
+  margin: 0 1rem 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.blueText {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.reportsHeaderArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reportsHeaderLeft {
+  display: flex;
+  width: 50%;
+}
+
+.reportsHeaderLeft > *:first-child {
+  margin-right: 20px;
+}
+
+.searchButton {
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  color: var(--primaryHover);
+}
+
+/* table column styling */

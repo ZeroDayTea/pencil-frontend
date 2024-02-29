@@ -1,0 +1,38 @@
+.inventory-toggle {
+  margin: 0 10px;
+  font-size: 14px;
+  display: flex;
+}
+
+.inventory-toggle-item {
+  padding: 2px 20px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.inventory-toggle-item:hover {
+  color: var(--primaryHover);
+}
+
+.toggle-item-active {
+  color: var(--primaryHover);
+  background-color: rgba(113, 195, 231, 0.15);
+  border: 1px solid var(--primaryHover) !important;
+}
+
+.toggle-item-inactive {
+  color: #b0b0b0;
+  background-color: #fbfbfb;
+  border: 1px solid #d6d6d6 !important;
+}
+
+.toggle-item-left {
+  border-radius: 5px 0 0 5px;
+  border-right: 0.5px solid var(--primaryHover);
+}
+
+.toggle-item-right {
+  border-radius: 0 5px 5px 0;
+  border-left: 0.5px solid var(--primaryHover);
+}

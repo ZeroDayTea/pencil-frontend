@@ -1,0 +1,19 @@
+.itemForm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-area {
+  width: 55%;
+}
+
+.name-area > .customCombobox {
+  margin: 8px 0;
+}
+
+.limit-area {
+  width: 35%;
+}

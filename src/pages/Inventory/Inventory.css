@@ -1,0 +1,64 @@
+.dragLine {
+  border-top: hidden !important;
+  border-bottom: 3px solid #95d7af !important;
+}
+
+.dragLine::before {
+  content: '   ';
+  background-color: #95d7af;
+  margin: 5px !important;
+}
+
+.dragList {
+  padding: 0 0;
+}
+
+.setColorBlue {
+  background-color: #e7f5fb !important;
+}
+
+/* inventory table spacing */
+.inventoryCol1 {
+  width: 5%;
+  color: var(--textDisabled);
+}
+
+.inventoryCol2 {
+  width: 5%;
+  font-size: 14px;
+  color: var(--textDisabled);
+  display: flex;
+  justify-content: center;
+}
+
+.inventoryCol3 {
+  width: 65%;
+  display: flex;
+  align-items: center;
+}
+
+.inventoryCol4 {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventoryCol5 {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.inventoryCol1:hover {
+  cursor: move;
+}
+
+.inventoryCol3:hover,
+.inventoryCol4:hover {
+  cursor: text;
+}
+
+.inventoryCol5:hover {
+  cursor: pointer;
+}

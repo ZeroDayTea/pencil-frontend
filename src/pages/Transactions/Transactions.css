@@ -1,0 +1,147 @@
+/* Border radius of table row */
+
+tr.ant-table-row td:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-left: 25px;
+}
+
+tr.ant-table-row td:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-right: 30px;
+}
+
+/* hide table empty icon  */
+.ant-empty {
+  visibility: hidden;
+}
+
+.ant-table table {
+  border-spacing: 0 15px;
+  font-size: 16px;
+}
+
+.ant-checkbox-wrapper {
+  border-spacing: 0;
+}
+
+.ant-table-thead > tr > th {
+  background-color: var(--bgSecondary);
+  color: var(--textSecondary);
+  padding-top: 0;
+}
+
+/* hides the lines between table headers */
+th.ant-table-cell::before {
+  visibility: hidden;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 15px;
+  background-color: var(--bgPrimary);
+}
+
+.ant-table-expanded-row .ant-table-cell {
+  position: relative;
+  top: -25px;
+  background-color: var(--bgPrimary);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 0;
+}
+
+.expandedData {
+  padding: 0px 15px;
+}
+
+.expandedData th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  color: var(--textDisabled);
+}
+
+.expandedData td,
+.expandedData th {
+  padding-left: 50px;
+}
+
+.ant-checkbox-disabled {
+  visibility: hidden;
+}
+
+/* approve deny button styling */
+.roundButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.approve-button {
+  background: rgba(211, 245, 224, 0.5);
+  border: 1px solid rgba(47, 181, 101, 0.5);
+  color: rgba(47, 181, 101, 0.5);
+}
+
+.approve-button:hover {
+  background: rgba(47, 181, 101, 0.5);
+  color: rgba(47, 181, 101, 0.9);
+  cursor: pointer;
+}
+
+.deny-button {
+  background: rgba(240, 71, 71, 0.1);
+  border: 1px solid rgba(240, 71, 71, 0.57);
+  color: rgba(240, 71, 71, 0.57);
+}
+
+.deny-button:hover {
+  background: rgba(240, 71, 71, 0.57);
+  border: 1px solid rgba(240, 71, 71, 0.57);
+  cursor: pointer;
+}
+
+.statusPending {
+  color: var(--primary);
+}
+
+.statusApproved {
+  color: rgba(47, 181, 101, 1);
+}
+
+.statusDenied {
+  color: rgba(240, 71, 71, 1);
+}
+
+.all-items {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.expandArrowTransaction {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* TODO: check if we need this, 
+turns the row border to red if the transaction is overloading */
+
+.overload > td {
+  border-top: 1px solid #f04747;
+  border-bottom: 1px solid #f04747 !important;
+}
+
+tr.overload td:first-child {
+  border-left: 1px solid #f04747;
+}
+
+tr.overload td:last-child {
+  border-right: 1px solid #f04747;
+}

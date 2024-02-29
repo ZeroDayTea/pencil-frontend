@@ -1,0 +1,137 @@
+.settingsTitle {
+  font-size: 28px;
+}
+
+.settingsContainer {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+
+.settingNav {
+  width: 20vw;
+  background-color: var(--bgSecondary);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--textSecondary);
+}
+
+.settingNavRow {
+  display: flex;
+  cursor: pointer;
+  height: 50px;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.settingNavRow:hover {
+  color: var(--primaryHover);
+}
+
+.navRow-active {
+  color: #45a5cf;
+  background-color: #eaf6fc;
+  outline: 1.5px solid #50b9e8 !important;
+}
+
+.settingsBody {
+  position: relative;
+  width: 90%;
+  height: 65vh;
+  background-color: var(--bgSecondary);
+  padding: 40px;
+  border-radius: 20px;
+  margin: auto;
+  margin-left: 30px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+.settingsBody > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.locationRow {
+  display: flex;
+  background-color: #f6f6f6;
+  margin: auto;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.locationRow .editableText {
+  width: 100%;
+  padding: 2px 8px;
+  margin-right: 10px;
+}
+
+.locationRowCol1 {
+  width: 25%;
+  margin-right: 2%;
+} 
+
+.locationRowCol2 {
+  width: 73%;
+}
+
+.profileColHeader,
+.locationManagerHeader {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.profileEntryTitle {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.profileInputContainer {
+  color: var(--textSecondary);
+}
+
+.profileInputContainerDisabled {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.profileInput {
+  border-radius: 5px;
+  border: 1.5px solid;
+  outline: none;
+  padding: 2px 8px;
+}
+
+.profileInput:focus {
+  border: 1.5px solid var(--primaryHover);
+}
+
+.profileActionButton {
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  position: absolute;
+}
+
+/* School Manager Styles */
+.schoolManagerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}

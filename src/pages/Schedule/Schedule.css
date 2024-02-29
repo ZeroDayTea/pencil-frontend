@@ -1,0 +1,26 @@
+.scheduleCol1 {
+  width: 20%;
+}
+
+.scheduleCol2 {
+  width: 30%;
+}
+
+.scheduleCol3 {
+  width: 10%;
+}
+
+.scheduleCol4 {
+  width: 40%;
+}
+
+.scheduleCol2,
+.scheduleCol3,
+.scheduleCol4 {
+  align-self: center;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+}
