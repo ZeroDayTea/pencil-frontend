@@ -51,6 +51,43 @@ const Schedule = () => {
     setUntilDate(dateToString(last));
   };
 
+  const syncCalendly = async () => {
+    const today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth() + 1;
+    const year = today.getFullYear();
+
+    if (day < 10) {
+      day = `0${day}`;
+    }
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    const date = `${year}-${month}-${day}`;
+
+    console.log(date);
+
+    try {
+      await fetch(
+        `${process.env.REACT_APP_PROXY}/api/schedule/syncAppointments`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ startDate: date }),
+        }
+      );
+      setError('');
+      setErrorDescription('');
+    } catch (err) {
+      setError(err.message);
+      if (err.response?.data && Object.keys(err.response?.data).length) {
+        setErrorDescription(err.response?.data);
+      }
+    }
+  };
+
   useEffect(async () => {
     if (!fromDate) setThisWeek();
     if (!currentLocation) setError('Please select a location');
@@ -145,6 +182,9 @@ const Schedule = () => {
   const rightItems = (
     <>
       <IoMdRefresh className="refreshButton" size="26" onClick={refreshData} />
+      <div className="secondaryButton" onClick={syncCalendly}>
+        Sync Calendly
+      </div>
       <div className="secondaryButton" onClick={setToday}>
         Today
       </div>
