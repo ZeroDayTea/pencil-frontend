@@ -69,13 +69,12 @@ const Schedule = () => {
 
     try {
       await fetch(
-        `${process.env.REACT_APP_PROXY}/api/schedule/syncAppointments`,
+        `${process.env.REACT_APP_PROXY}/api/schedule/syncAppointments?startDate=${date}`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ startDate: date }),
         }
       );
       setError('');
